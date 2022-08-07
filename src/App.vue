@@ -1,14 +1,17 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <div class="one">黑马头条</div>
+    <router-view />
   </div>
 </template>
 
 <style lang="less">
+.one {
+  width: 50px;
+  height: 50px;
+  font-size: 16px;
+  background-color: pink;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
