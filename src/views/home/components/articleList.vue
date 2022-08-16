@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2022-08-13 19:09:36
- * @LastEditTime: 2022-08-13 20:06:21
+ * @LastEditTime: 2022-08-15 19:08:23
  * @LastEditors: 小柒
  * @Description: In User Settings Edit
  * @FilePath: \toutiao-m\src\views\home\components\articleList.vue
@@ -20,11 +20,11 @@
         finished-text="没有更多了"
         @load="onLoad"
       >
-        <van-cell
+        <artcileItem
           v-for="(item, index) in list"
           :key="index"
-          :title="item.title"
-        />
+          :article="item"
+        ></artcileItem>
       </van-list>
     </van-pull-refresh>
   </div>
@@ -32,6 +32,7 @@
 
 <script>
 import { getArticles } from '@/api/article'
+import artcileItem from '@/components/article-item/index.vue'
 export default {
   name: 'articleList',
   props: {
@@ -39,6 +40,9 @@ export default {
       typeof: 'Objeck',
       requireed: true
     }
+  },
+  components: {
+    artcileItem
   },
   data() {
     return {
