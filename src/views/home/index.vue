@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2022-08-09 19:18:57
- * @LastEditTime: 2022-08-16 15:25:31
+ * @LastEditTime: 2022-08-16 16:08:49
  * @LastEditors: 小柒
  * @Description: In User Settings Edit
  * @FilePath: \toutiao-m\src\views\home\index.vue
@@ -16,6 +16,7 @@
         size="small"
         class="search-btn"
         icon="search"
+        :to="{ name: 'search' }"
         >搜索</van-button
       >
     </van-nav-bar>
